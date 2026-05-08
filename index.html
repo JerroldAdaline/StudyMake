@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" aria-labelledby="app-title">
+    <section class="todo-card">
+      <header class="todo-header">
+        <p class="eyebrow">Stay organized</p>
+        <h1 id="app-title">Todo List</h1>
+        <p class="subtitle">Add tasks, mark them complete, and clear finished items.</p>
+      </header>
+
+      <form id="todo-form" class="todo-form" autocomplete="off">
+        <label class="sr-only" for="todo-input">New todo</label>
+        <input id="todo-input" type="text" placeholder="What needs to be done?" maxlength="80" required>
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="todo-toolbar" aria-live="polite">
+        <span id="todo-count">0 tasks remaining</span>
+        <button id="clear-completed" type="button">Clear completed</button>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-label="Todo items"></ul>
+
+      <p id="empty-state" class="empty-state">No todos yet. Add your first task above.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
